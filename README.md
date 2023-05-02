@@ -13,14 +13,17 @@ To train a model on the scraped text, run <code>python metal2vec.py</code> (need
 
 Once a model has been trained, we can investigate it, and see results like the following.
 
+
 <code>from gensim.models import Word2Vec</code>  
+
 
 <code>model = Word2Vec.load('metal2vec.model')</code>
 
-<code>model.wv.most_similar('guitar')</code>  
 
-<code>
-[('keyboard', 0.7434054613113403),
+<code>model.wv.most_similar('guitar')</code>
+
+
+<code>[('keyboard', 0.7434054613113403),
  ('guitars', 0.6595211029052734),  
  ('organ', 0.6369956731796265),  
  ('tapping', 0.6351393461227417),  
@@ -29,13 +32,13 @@ Once a model has been trained, we can investigate it, and see results like the f
  ('synth', 0.6144397258758545),  
  ('percussion', 0.6084404587745667),  
  ('piano', 0.6072964072227478),  
- ('drum', 0.6049701571464539)]
-</code>
+ ('drum', 0.6049701571464539)]</code>
+
 
 <code>model.wv.most_similar('thrash')</code>
 
-<code>
-[('death/thrash', 0.7642471790313721),
+
+<code>[('death/thrash', 0.7642471790313721),
  ('grindcore', 0.7229084372520447),
  ('doom', 0.7182871699333191),
  ('sludge', 0.7069088220596313),
@@ -44,13 +47,13 @@ Once a model has been trained, we can investigate it, and see results like the f
  ('nwobhm', 0.6821368336677551),
  ('prog', 0.680372953414917),
  ('metalcore', 0.6787870526313782),
- ('thrash/speed', 0.6737620830535889)]
-</code>
+ ('thrash/speed', 0.6737620830535889)]</code>
+
 
 <code>model.wv.most_similar('record')</code>
 
-<code>
-[('album', 0.9425547122955322),
+
+<code>[('album', 0.9425547122955322),
  ('release', 0.813746452331543),
  ('ep', 0.7191856503486633),
  ('cd', 0.6953387260437012),
@@ -59,5 +62,4 @@ Once a model has been trained, we can investigate it, and see results like the f
  ('disc', 0.6331155896186829),
  ('dvd', 0.5973551273345947),
  ('demo', 0.5813403725624084),
- ('output', 0.5806112885475159)]
-</code>
+ ('output', 0.5806112885475159)]</code>
